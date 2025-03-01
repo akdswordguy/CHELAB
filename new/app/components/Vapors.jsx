@@ -7,14 +7,14 @@ const Vapors = ({ active, color = "white" }) => {
 
   useEffect(() => {
     if (active) {
-      playFireSound(); // Play the fire sound
+      playFireSound();
       const timer = setTimeout(() => {
-        stop(); // Stop after 3 seconds
+        stop(); 
       }, 3000);
 
       return () => {
         clearTimeout(timer);
-        stop(); // Ensure sound stops when component unmounts
+        stop();
       };
     }
   }, [active, playFireSound, stop]);

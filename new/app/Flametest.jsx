@@ -9,11 +9,10 @@ export const FlameTest = ({ element }) => {
       let color;
       switch (element) {
         case "Na":
-          color = "#FFD700"; // Yellow flame
+          color = "#FFD700"; 
           break;
-        // Add more cases for other elements
         default:
-          color = "#FFFFFF"; // Default white flame
+          color = "#FFFFFF"; 
       }
       flameRef.current.material.color.set(color);
     }

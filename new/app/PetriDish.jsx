@@ -30,6 +30,16 @@ export function PetriDish({ element, color, ...props }) {
         />
       </mesh>
 
+      {/* Border for the Petri Dish */}
+      <mesh position={[0, 0, 0]}>
+        <cylinderGeometry args={[1.55, 1.55, 0.05, 32]} /> {/* Slightly larger */}
+        <meshBasicMaterial
+          color="black"
+          transparent
+          opacity={0.5}
+        />
+      </mesh>
+
       {/* Circle representing the dropped element */}
       {element && (
         <mesh position={[0, 0.6, 0]}>

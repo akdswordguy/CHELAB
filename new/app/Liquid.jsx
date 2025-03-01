@@ -7,13 +7,13 @@ export function Liquid({ color }) {
 
   useFrame(() => {
     if (liquidRef.current) {
-      liquidRef.current.rotation.y += 0.001; // Slight movement for realism
+      liquidRef.current.rotation.y += 0.001; 
     }
   });
 
   return (
-    <mesh ref={liquidRef} position={[0, -1.2, 0]}> {/* Adjusted position */}
-      <cylinderGeometry args={[1, 1, 1.5, 32]} /> {/* Increased size */}
+    <mesh ref={liquidRef} position={[0, -1.2, 0]}> 
+      <cylinderGeometry args={[1, 1, 1.5, 32]} /> 
       <meshPhysicalMaterial
         color={color}
         roughness={0.2}

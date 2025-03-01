@@ -7,15 +7,14 @@ export function Beaker(props) {
 
   useFrame(() => {
     if (beakerRef.current) {
-      beakerRef.current.rotation.y += 0.002; // Slight rotation effect
+      beakerRef.current.rotation.y += 0.002; 
     }
   });
 
   return (
     <group ref={beakerRef} {...props}>
-      {/* Beaker Body */}
       <mesh position={[0, -0.5, 0]}>
-        <cylinderGeometry args={[1.2, 1.25, 2, 31, 16, true]} /> {/* Increased size */}
+        <cylinderGeometry args={[1.2, 1.25, 2, 31, 16, true]} /> 
         <meshPhysicalMaterial
           color="white"
           roughness={0.1}
@@ -27,9 +26,8 @@ export function Beaker(props) {
         />
       </mesh>
 
-      {/* Bottom of Beaker */}
-      <mesh position={[0, -2, 0]}> {/* Increased position to adjust size */}
-        <cylinderGeometry args={[1.25, 1.25, 0.8, 32]} /> {/* Increased size */}
+      <mesh position={[0, -2, 0]}> 
+        <cylinderGeometry args={[1.25, 1.25, 0.8, 32]} />
         <meshPhysicalMaterial
           color="white"
           roughness={0.1}
